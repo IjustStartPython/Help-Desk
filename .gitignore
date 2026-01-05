@@ -1,0 +1,60 @@
+# Environnement virtuel Python
+venv/
+env/
+ENV/
+.venv
+
+# Fichiers Python compilés
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Données personnelles et sensibles
+data/
+*.db
+*.sqlite
+*.sqlite3
+secret.key
+
+# Fichiers de configuration locaux
+.env
+.env.local
+*.env
+
+# Logs
+*.log
+logs/
+
+# Fichiers temporaires
+*.tmp
+*.temp
+.cache/
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+.eggs/
+
+# Tests
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Exports générés
+exports/
+*.pdf
+*.xlsx
