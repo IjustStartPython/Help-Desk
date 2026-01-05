@@ -99,8 +99,8 @@ help-desk/
 
 1. Cloner le dépôt
 ```bash
-git clone https://github.com/votre-username/help-desk.git
-cd help-desk
+git clone https://github.com/IjustStartPython/Help-Desk.git
+cd Help-Desk
 ```
 
 2. Créer un environnement virtuel
