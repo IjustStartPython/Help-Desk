@@ -14,10 +14,6 @@ J'ai voulu créer une application qui :
 - Intègre une IA qui fonctionne sans envoyer de données dans le cloud
 - Aide les personnes à mieux comprendre leurs émotions et habitudes
 
-## Captures d'écran
-
-_[TODO: Ajouter captures d'écran de l'interface]_
-
 ## Fonctionnalités
 
 - **Profil personnalisé** : Création d'un profil avec tags personnalisables
@@ -180,7 +176,7 @@ Cette application est un outil de soutien personnel et **ne remplace pas** un su
 
 ## Licence
 
-Ce projet est sous licence MIT - voir le fichier LICENSE pour plus de détails.
+Ce projet est sous  GNU GENERAL PUBLIC LICENSE - voir le fichier LICENSE pour plus de détails.
 
 ## Contact
 
