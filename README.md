@@ -2,7 +2,7 @@
 
 > Un compagnon de soutien personnel TDAH-friendly pour faciliter le quotidien des personnes ayant un TDAH, de l'anxiété ou des difficultés émotionnelles.
 
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/IjustStartPython/Help-Desk)
+[![Version](https://img.shields.io/badge/version-0.8.0-blue.svg)](https://github.com/IjustStartPython/Help-Desk)
 [![Python](https://img.shields.io/badge/python-3.13+-green.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/license-GPL--3.0-orange.svg)](LICENSE)
 
