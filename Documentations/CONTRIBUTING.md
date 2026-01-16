@@ -6,7 +6,7 @@ Ce projet est développé avec soin pour aider les personnes TDAH/anxieuses. Tou
 
 ---
 
-## 🌟 Valeurs du projet
+##  Valeurs du projet
 
 Avant de contribuer, assure-toi de partager mes valeurs :
 
@@ -18,7 +18,7 @@ Avant de contribuer, assure-toi de partager mes valeurs :
 
 ---
 
-## 🐛 Signaler un bug
+##  Signaler un bug
 
 ### Avant de créer une issue
 
@@ -60,7 +60,7 @@ Si applicable, ajoute des captures.
 **Logs**
 Si disponibles, colle les logs pertinents :
 
-## 💡 Proposer une fonctionnalité
+##  Proposer une fonctionnalité
 
 ### Avant de proposer
 

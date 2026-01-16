@@ -1,4 +1,4 @@
-# 🐛 Issues Connues - Help-Desk v0.8.0
+#  Issues Connues - Help-Desk v0.8.0
 
 > Ce document liste toutes les issues identifiées dans le projet et leur plan de correction.
 

@@ -6,17 +6,17 @@
 ## 🎯 Qu'est-ce que Help-Desk ?
 
 Help-Desk est un **compagnon personnel local** qui t'aide à :
-- 😊 Suivre tes émotions jour après jour
-- ✅ Gérer tes habitudes et tâches
-- 🎯 Rester concentré (mode focus TDAH)
-- 🤖 Discuter avec une IA bienveillante (100% local)
-- 📊 Visualiser tes progrès
+-  Suivre tes émotions jour après jour
+-  Gérer tes habitudes et tâches
+-  Rester concentré (mode focus TDAH)
+-  Discuter avec une IA bienveillante (100% local)
+-  Visualiser tes progrès
 
 **Important :** Aucune donnée n'est envoyée sur Internet. Tout reste sur ton ordinateur.
 
 ---
 
-## 💻 Installation
+##  Installation
 
 ### Prérequis
 

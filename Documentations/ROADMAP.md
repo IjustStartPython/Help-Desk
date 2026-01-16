@@ -11,25 +11,25 @@
 **Date de release :** 16 janvier 2026
 
 **Fonctionnalités :**
-- ✅ Profil utilisateur
-- ✅ Journal d'humeur
-- ✅ Suivi des habitudes
-- ✅ Chat IA local (Ollama)
-- ✅ Gamification (points, badges, streaks)
-- ✅ Mode Focus TDAH
-- ✅ Exports PDF/Excel
-- ✅ Sauvegardes automatiques
-- ✅ Chiffrement optionnel (Fernet)
+-  Profil utilisateur
+-  Journal d'humeur
+-  Suivi des habitudes
+-  Chat IA local (Ollama)
+-  Gamification (points, badges, streaks)
+-  Mode Focus TDAH
+-  Exports PDF/Excel
+-  Sauvegardes automatiques
+-  Chiffrement optionnel (Fernet)
 
 **Limitations connues :**
 Voir [KNOWN_ISSUES.md](KNOWN_ISSUES.md)
 
 ---
 
-## 🎯 Version 0.9.0 - "Sécurité et Stabilité"
+##  Version 0.9.0 - "Sécurité et Stabilité"
 
-**📅 Date prévue :** Février 2026  
-**🎯 Objectif :** Corriger les problèmes critiques de sécurité et stabilité
+** Date prévue :** Février 2026  
+** Objectif :** Corriger les problèmes critiques de sécurité et stabilité
 
 ### Corrections prioritaires
 
@@ -47,7 +47,7 @@ Voir [KNOWN_ISSUES.md](KNOWN_ISSUES.md)
   - Tester sur Windows 10/11
   - **Durée estimée :** 3-4h
 
-#### 🗄️ Base de données (issue #3)
+####  Base de données (issue #3)
 - [ ] **Issue #3** - Système de versioning des migrations
   - Créer table `schema_version` (version, applied_at, description)
   - Refactoriser migrations en fonctions numérotées
@@ -55,7 +55,7 @@ Voir [KNOWN_ISSUES.md](KNOWN_ISSUES.md)
   - Logger chaque migration appliquée
   - **Durée estimée :** 4-5h
 
-#### 📝 Logging (issues #5, #6)
+####  Logging (issues #5, #6)
 - [ ] **Issue #5** - Compléter le logging
   - Ajouter logs dans tous les services
   - Niveaux : INFO (succès), WARNING (comportement inattendu), ERROR (erreurs)
@@ -68,14 +68,14 @@ Voir [KNOWN_ISSUES.md](KNOWN_ISSUES.md)
   - Compression automatique des anciens logs (gzip)
   - **Durée estimée :** 1-2h
 
-#### 💾 Backups (issue #4)
+####  Backups (issue #4)
 - [ ] **Issue #4** - Déplacer backups dans %APPDATA%
   - Windows : `%APPDATA%/Help-Desk/backups/`
   - Linux/Mac : `~/.local/share/Help-Desk/backups/`
   - Migrer backups existants automatiquement
   - **Durée estimée :** 1-2h
 
-#### ✅ Tests (issue #8)
+####  Tests (issue #8)
 - [ ] **Issue #8** - Configurer pytest-cov
   - Créer `pytest.ini` avec config couverture
   - Lancer tests et mesurer couverture
@@ -84,25 +84,25 @@ Voir [KNOWN_ISSUES.md](KNOWN_ISSUES.md)
   - **Durée estimée :** 2h
 
 ### Critères de release 0.9.0
-- ✅ Toutes les issues critiques (🔴) corrigées
-- ✅ Toutes les issues moyennes (🟡) corrigées
-- ✅ Tests passent à 100%
-- ✅ Couverture ≥ 60%
-- ✅ Documentation mise à jour
-- ✅ Testé sur Windows 10/11, Ubuntu 22.04, macOS
+-  Toutes les issues critiques (🔴) corrigées
+-  Toutes les issues moyennes (🟡) corrigées
+-  Tests passent à 100%
+-  Couverture ≥ 60%
+-  Documentation mise à jour
+-  Testé sur Windows 10/11, Ubuntu 22.04, macOS
 
 **Durée totale estimée :** 2-3 semaines
 
 ---
 
-## 🚀 Version 1.0.0 - "Première Release Stable"
+##  Version 1.0.0 - "Première Release Stable"
 
-**📅 Date prévue :** Mars 2026  
-**🎯 Objectif :** Application complète, documentée et production-ready
+** Date prévue :** Mars 2026  
+** Objectif :** Application complète, documentée et production-ready
 
 ### Fonctionnalités
 
-#### 📖 Documentation (issue #9)
+####  Documentation (issue #9)
 - [ ] **Issue #9** - Guide Ollama complet
   - Instructions Windows/Linux/Mac
   - Screenshots de chaque étape
@@ -114,39 +114,39 @@ Voir [KNOWN_ISSUES.md](KNOWN_ISSUES.md)
   - Tutoriel pas-à-pas première utilisation
   - Cas d'usage TDAH
 
-#### 📊 Exports (issue #7)
+####  Exports (issue #7)
 - [ ] **Issue #7** - Anonymisation des exports
   - Checkbox "Anonymiser" dans l'UI
   - Remplace prénom par "Utilisateur"
   - Masque date de naissance (affiche âge seulement)
   - Garde les données statistiques intactes
 
-#### 🎯 UX (issue #10)
+####  UX (issue #10)
 - [ ] **Issue #10** - Focus Mode robuste
   - Détection rechargement intempestif
   - Message bienveillant : "Veux-tu reprendre ta session ?"
   - Sauvegarde progression dans `st.session_state`
   - Statistiques : nombre de sessions complétées
 
-#### 🎨 UI
+####  UI
 - [ ] Thème personnalisable (clair/sombre/TDAH-friendly)
 - [ ] Animations subtiles (feedback visuel)
 - [ ] Sons optionnels (notifications, fin focus)
 - [ ] Raccourcis clavier (accessibilité)
 
-#### 🧪 Qualité
+####  Qualité
 - [ ] Couverture tests ≥ 80%
 - [ ] Tests d'intégration (DB + services)
 - [ ] Tests de sécurité (injection SQL, validation)
 - [ ] Analyse statique (pylint, mypy)
 
 ### Critères de release 1.0.0
-- ✅ Toutes les issues fermées
-- ✅ Documentation complète (guides + screenshots)
-- ✅ Couverture tests ≥ 80%
-- ✅ Aucun bug critique connu
-- ✅ Testé par 3+ utilisateurs réels
-- ✅ Performance optimisée (< 1s startup)
+-  Toutes les issues fermées
+-  Documentation complète (guides + screenshots)
+-  Couverture tests ≥ 80%
+-  Aucun bug critique connu
+-  Testé par 3+ utilisateurs réels
+-  Performance optimisée (< 1s startup)
 
 **Durée totale estimée :** 1 mois
 
@@ -154,25 +154,25 @@ Voir [KNOWN_ISSUES.md](KNOWN_ISSUES.md)
 
 ## 🌟 Version 2.0.0 - "Multi-utilisateurs"
 
-**📅 Date prévue :** T2 2026 (Avril-Juin)  
-**🎯 Objectif :** Support de plusieurs profils sur une même machine
+** Date prévue :** T2 2026 (Avril-Juin)  
+** Objectif :** Support de plusieurs profils sur une même machine
 
 ### Fonctionnalités majeures
 
-#### 👥 Multi-profils
+####  Multi-profils
 - [ ] Écran de sélection de profil au démarrage
 - [ ] Création/suppression de profils
 - [ ] Isolation complète des données par profil
 - [ ] Permissions par utilisateur OS
 
-#### 🔑 Authentification
+####  Authentification
 - [ ] Login avec mot de passe (hash bcrypt)
 - [ ] Protection par code PIN (4-6 chiffres)
 - [ ] Session auto-verrouillée après inactivité
 - [ ] Changement de mot de passe
 - [ ] Récupération mot de passe (question secrète)
 
-#### 📊 Statistiques avancées
+####  Statistiques avancées
 - [ ] Graphiques interactifs (Plotly)
 - [ ] Comparaison périodes (semaine/mois)
 - [ ] Export format JSON/CSV
@@ -184,60 +184,60 @@ Voir [KNOWN_ISSUES.md](KNOWN_ISSUES.md)
 - [ ] UI adaptée mobile TDAH-friendly
 
 ### Critères de release 2.0.0
-- ✅ Multi-profils fonctionnel
-- ✅ Authentification sécurisée
-- ✅ Tests de sécurité (pentesting basique)
-- ✅ App mobile beta fonctionnelle
-- ✅ Migration depuis v1.x automatique
+-  Multi-profils fonctionnel
+-  Authentification sécurisée
+-  Tests de sécurité (pentesting basique)
+-  App mobile beta fonctionnelle
+-  Migration depuis v1.x automatique
 
 **Durée totale estimée :** 2 mois
 
 ---
 
-## ☁️ Version 3.0.0 - "Cloud Optionnel"
+##  Version 3.0.0 - "Cloud Optionnel"
 
-**📅 Date prévue :** T4 2026 (Octobre-Décembre)  
-**🎯 Objectif :** Synchronisation cloud chiffrée end-to-end (opt-in)
+**Date prévue :** T4 2026 (Octobre-Décembre)  
+**Objectif :** Synchronisation cloud chiffrée end-to-end (opt-in)
 
 ### Fonctionnalités majeures
 
-#### ☁️ Synchronisation cloud
+####  Synchronisation cloud
 - [ ] Chiffrement E2E (clé jamais envoyée au serveur)
 - [ ] Sync sélectif (choisir quoi synchroniser)
 - [ ] Conflit résolution automatique
 - [ ] Backend self-hostable (Docker)
 - [ ] Support NextCloud/Syncthing
 
-#### 📱 App mobile native
+####  App mobile native
 - [ ] React Native ou Flutter
 - [ ] Notifications push
 - [ ] Widget home screen
 - [ ] Mode hors-ligne complet
 
-#### 🔔 Notifications & Rappels
+####  Notifications & Rappels
 - [ ] Rappels habitudes quotidiennes
 - [ ] Notification fin focus
 - [ ] Encouragements personnalisés
 - [ ] Smart reminders (ML basé sur historique)
 
-#### 🌐 API REST
+####  API REST
 - [ ] API publique documentée (OpenAPI)
 - [ ] Webhooks pour intégrations
 - [ ] Support IFTTT/Zapier
 - [ ] SDK Python
 
 ### Critères de release 3.0.0
-- ✅ Sync cloud E2E fonctionnel
-- ✅ App mobile stable (iOS + Android)
-- ✅ API documentée et testée
-- ✅ Audit sécurité externe
-- ✅ RGPD compliant
+-  Sync cloud E2E fonctionnel
+-  App mobile stable (iOS + Android)
+-  API documentée et testée
+-  Audit sécurité externe
+-  RGPD compliant
 
 **Durée totale estimée :** 3-4 mois
 
 ---
 
-## 🎯 Backlog (fonctionnalités futures)
+##  Backlog (fonctionnalités futures)
 
 ### Intégrations
 - [ ] Export Notion/Obsidian
@@ -263,23 +263,23 @@ Voir [KNOWN_ISSUES.md](KNOWN_ISSUES.md)
 
 ---
 
-## 📊 Métriques de succès
+##  Métriques de succès
 
 ### v1.0.0
-- 🎯 10+ utilisateurs actifs
-- 🎯 80% satisfaction utilisateur
-- 🎯 0 bugs critiques
-- 🎯 Documentation complète
+-  10+ utilisateurs actifs
+-  80% satisfaction utilisateur
+-  0 bugs critiques
+-  Documentation complète
 
 ### v2.0.0
-- 🎯 50+ utilisateurs actifs
-- 🎯 5+ profils par installation
-- 🎯 App mobile 100+ téléchargements
+-  50+ utilisateurs actifs
+-  5+ profils par installation
+-  App mobile 100+ téléchargements
 
 ### v3.0.0
-- 🎯 500+ utilisateurs cloud
-- 🎯 API utilisée par 10+ intégrations
-- 🎯 Communauté active (forum/Discord)
+-  500+ utilisateurs cloud
+-  API utilisée par 10+ intégrations
+-  Communauté active (forum/Discord)
 
 ---
 

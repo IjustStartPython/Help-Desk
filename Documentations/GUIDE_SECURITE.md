@@ -1,4 +1,4 @@
-# 🔐 Guide de sécurité - Help-Desk
+#  Guide de sécurité - Help-Desk
 
 Ce guide t'explique comment utiliser les nouvelles fonctionnalités de sécurité de Help-Desk.
 
@@ -11,7 +11,7 @@ Ce guide t'explique comment utiliser les nouvelles fonctionnalités de sécurit�
 
 ---
 
-## ✅ Validation automatique
+##  Validation automatique
 
 ### Qu'est-ce que c'est ?
 
@@ -35,7 +35,7 @@ La validation automatique vérifie toutes tes entrées pour s'assurer qu'elles s
 
 ---
 
-## 💾 Système de backup
+##  Système de backup
 
 ### Accéder aux backups
 
@@ -44,22 +44,22 @@ La validation automatique vérifie toutes tes entrées pour s'assurer qu'elles s
 
 ### Fonctionnalités disponibles
 
-#### 🔄 Créer un backup manuel
+####  Créer un backup manuel
 
 - Clique sur **"Créer un backup maintenant"**
 - Le backup est créé instantanément
 - Tu verras le nom du fichier créé
 
-#### 📋 Voir les backups disponibles
+####  Voir les backups disponibles
 
 - Tous tes backups sont listés du plus récent au plus ancien
 - Pour chaque backup, tu peux voir :
-  - 📅 La date et l'heure de création
-  - 💾 La taille du fichier
-  - ♻️ Option de restauration
-  - 🗑️ Option de suppression
+  -  La date et l'heure de création
+  -  La taille du fichier
+  -  Option de restauration
+  -  Option de suppression
 
-#### ♻️ Restaurer un backup
+####  Restaurer un backup
 
 ⚠️ **Attention** : Restaurer un backup remplace toutes tes données actuelles !
 
@@ -68,13 +68,13 @@ La validation automatique vérifie toutes tes entrées pour s'assurer qu'elles s
 3. Un backup de tes données actuelles est créé automatiquement avant la restauration
 4. Redémarre l'application
 
-#### 🧹 Nettoyer les anciens backups
+####  Nettoyer les anciens backups
 
 - Clique sur **"Nettoyer les anciens"**
 - Garde les 10 backups les plus récents par défaut
 - Les anciens backups sont supprimés automatiquement
 
-#### ⚡ Backup automatique
+####  Backup automatique
 
 - Un backup est créé **automatiquement au démarrage** de l'application
 - Tu n'as rien à faire !
@@ -96,20 +96,20 @@ Help-Desk/
 
 ---
 
-## 🔐 Chiffrement des données
+##  Chiffrement des données
 
 ### Qu'est-ce que le chiffrement ?
 
 Le chiffrement transforme tes données en un format illisible sans la clé de déchiffrement.
 
 **Avantages** :
-- 🔒 Protection supplémentaire de tes données sensibles
-- 🛡️ Sécurité en cas d'accès non autorisé à ton ordinateur
-- 🔑 Seule ta clé peut déchiffrer les données
+-  Protection supplémentaire de tes données sensibles
+-  Sécurité en cas d'accès non autorisé à ton ordinateur
+-  Seule ta clé peut déchiffrer les données
 
 **Inconvénients** :
-- ⚠️ Si tu perds la clé, **tu perds tes données définitivement**
-- 🐌 Légère baisse de performance (négligeable)
+-  Si tu perds la clé, **tu perds tes données définitivement**
+-  Légère baisse de performance (négligeable)
 
 ### Accéder au chiffrement
 
@@ -136,9 +136,9 @@ Le chiffrement transforme tes données en un format illisible sans la clé de d�
 
 #### Après activation
 
-- ✅ Le statut dans la sidebar affichera "🔒 Chiffrement activé"
-- 📄 Tes données sensibles sont maintenant chiffrées
-- 🔑 La clé est dans `data/secret.key`
+-  Le statut dans la sidebar affichera "🔒 Chiffrement activé"
+-  Tes données sensibles sont maintenant chiffrées
+-  La clé est dans `data/secret.key`
 
 ### Désactiver le chiffrement
 
@@ -172,28 +172,28 @@ Pour transférer tes données chiffrées :
 
 ### 1. Backups réguliers
 
-- ✅ Crée un backup manuel avant toute opération importante
-- ✅ Vérifie régulièrement que tu as des backups récents
-- ✅ Garde au moins 10 backups (configuré par défaut)
+-  Crée un backup manuel avant toute opération importante
+-  Vérifie régulièrement que tu as des backups récents
+-  Garde au moins 10 backups (configuré par défaut)
 
 ### 2. Protection de la clé de chiffrement
 
 Si tu actives le chiffrement :
 
-- ✅ Sauvegarde `data/secret.key` immédiatement
-- ✅ Stocke la clé dans plusieurs endroits sûrs :
+-  Sauvegarde `data/secret.key` immédiatement
+-  Stocke la clé dans plusieurs endroits sûrs :
   - Clé USB chiffrée
   - Cloud sécurisé (Dropbox, Google Drive, etc.)
   - Gestionnaire de mots de passe
-- ❌ Ne partage JAMAIS ta clé avec personne
-- ❌ Ne stocke pas la clé sur un support non sécurisé
+-  Ne partage JAMAIS ta clé avec personne
+-  Ne stocke pas la clé sur un support non sécurisé
 
 ### 3. Sécurité générale
 
-- 🔒 Verrouille ton ordinateur quand tu t'absentes
-- 🔐 Utilise un mot de passe fort pour ta session
-- 🔄 Fais des backups réguliers (même sans chiffrement)
-- 💾 Envisage d'activer le chiffrement du disque système (BitLocker, FileVault, LUKS)
+-  Verrouille ton ordinateur quand tu t'absentes
+-  Utilise un mot de passe fort pour ta session
+-  Fais des backups réguliers (même sans chiffrement)
+-  Envisage d'activer le chiffrement du disque système (BitLocker, FileVault, LUKS)
 
 ### 4. Avant de faire des changements importants
 
@@ -203,12 +203,12 @@ Avant de :
 - Modifier la base de données manuellement
 
 Fais toujours :
-- ✅ Un backup manuel
-- ✅ Vérifie que le backup fonctionne (regarde sa taille, date, etc.)
+-  Un backup manuel
+-  Vérifie que le backup fonctionne (regarde sa taille, date, etc.)
 
 ---
 
-## 🆘 En cas de problème
+##  En cas de problème
 
 ### Mes données ont disparu !
 
@@ -234,9 +234,9 @@ Malheureusement, sans la clé :
 
 ## 📞 Besoin d'aide ?
 
-- 📖 Lis le `README.md` pour plus d'informations
-- 📋 Consulte le `CHANGELOG.md` pour les nouveautés
-- 🐛 Reporte les bugs sur GitHub Issues
+-  Lis le `README.md` pour plus d'informations
+-  Consulte le `CHANGELOG.md` pour les nouveautés
+-  Reporte les bugs sur GitHub Issues
 
 **Rappel** : Help-Desk n'est pas un outil médical. En cas de détresse, contacte un professionnel de santé.
 

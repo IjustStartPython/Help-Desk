@@ -12,41 +12,41 @@
 
 Help-Desk est un projet personnel que j'ai développé pour **apprendre à créer une application complète en Python** tout en répondant à un vrai besoin : offrir un espace sécurisé et privé pour suivre son humeur, ses habitudes et dialoguer avec un assistant IA bienveillant.
 
-### 🎯 Pourquoi ce projet ?
+###  Pourquoi ce projet ?
 
 J'ai voulu créer une application qui :
-- 🔒 **Respecte la vie privée** (données 100% locales)
-- 🎨 **Soit simple et accessible** à utiliser (design TDAH-friendly)
-- 🤖 **Intègre une IA locale** qui fonctionne sans envoyer de données dans le cloud
-- 📊 **Aide à mieux comprendre** ses émotions et habitudes
-- 🎮 **Motive par la gamification** (points, badges, séries)
+-  **Respecte la vie privée** (données 100% locales)
+-  **Soit simple et accessible** à utiliser (design TDAH-friendly)
+-  **Intègre une IA locale** qui fonctionne sans envoyer de données dans le cloud
+-  **Aide à mieux comprendre** ses émotions et habitudes
+-  **Motive par la gamification** (points, badges, séries)
 
 ---
 
-## ✨ Fonctionnalités
+##  Fonctionnalités
 
-### 🧠 Spécial TDAH
+###  Spécial TDAH
 
-- **🎯 Mode Focus** : Timer Pomodoro 25 min avec interface immersive et messages d'encouragement
-- **🎮 Système de gamification** :
+- ** Mode Focus** : Timer Pomodoro 25 min avec interface immersive et messages d'encouragement
+- ** Système de gamification** :
   - Points automatiques (humeur, tâches, séries)
   - 7 badges à débloquer
   - Suivi des séries de jours consécutifs
   - Confettis et célébrations 🎉
-- **📊 Dashboard TDAH** : Couleurs apaisantes (pas de rouge/noir)
-- **🎨 Thème optimisé** : Palette de couleurs douces (bleus, verts, lavande)
-- **📝 Interface claire** : Espacements généreux, boutons larges (48px min)
+- ** Dashboard TDAH** : Couleurs apaisantes (pas de rouge/noir)
+- ** Thème optimisé** : Palette de couleurs douces (bleus, verts, lavande)
+- ** Interface claire** : Espacements généreux, boutons larges (48px min)
 
 ### 💙 Fonctionnalités principales
 
-- **👤 Profil personnalisé** : Création avec tags personnalisables
-- **😊 Journal d'humeur** : Suivi quotidien avec émojis et notes
-- **✅ Suivi d'habitudes** : Définir et suivre des tâches avec temps passé
-- **💬 Chat IA local** : Discussion avec Mathi (assistant bienveillant via Ollama)
-- **📥 Exports** : Génération de rapports PDF et Excel
-- **💾 Sauvegardes** : Backup automatique au démarrage + backups manuels
-- **🔐 Sécurité** : Chiffrement optionnel (Fernet AES 128-bit)
-- **📈 Visualisations** : Graphiques d'évolution de l'humeur
+- ** Profil personnalisé** : Création avec tags personnalisables
+- ** Journal d'humeur** : Suivi quotidien avec émojis et notes
+- ** Suivi d'habitudes** : Définir et suivre des tâches avec temps passé
+- ** Chat IA local** : Discussion avec Mathi (assistant bienveillant via Ollama)
+- ** Exports** : Génération de rapports PDF et Excel
+- ** Sauvegardes** : Backup automatique au démarrage + backups manuels
+- ** Sécurité** : Chiffrement optionnel (Fernet AES 128-bit)
+- ** Visualisations** : Graphiques d'évolution de l'humeur
 
 ---
 
@@ -81,7 +81,7 @@ help-desk/
 ├── requirements-dev.txt       # Dépendances de développement
 ├── pytest.ini                 # Configuration des tests
 │
-├── 📚 Documentation/
+├──Documentation/
 │   ├── README.md              # Ce fichier
 │   ├── CHANGELOG.md           # Historique des versions
 │   ├── ROADMAP.md             # Fonctionnalités futures
@@ -93,16 +93,16 @@ help-desk/
 │   ├── GUIDE_SECURITE.md      # Guide chiffrement
 │   └── REMERCIEMENTS.md       # Crédits et ressources
 │
-├── 🎨 assets/                 # Ressources visuelles
+├──assets/                 # Ressources visuelles
 │   ├── icon.ico               # Icône de l'application
 │   └── theme.css              # Thème TDAH-friendly
 │
-├── 🗄️ db/                     # Couche base de données
+├──db/                     # Couche base de données
 │   ├── __init__.py
 │   ├── database.py            # Connexion et configuration
 │   └── models.py              # Schéma et requêtes SQL
 │
-├── 🔧 services/               # Logique métier
+├──services/               # Logique métier
 │   ├── __init__.py
 │   ├── backup_service.py      # Interface de gestion des backups
 │   ├── chat_ai.py             # Interaction avec Ollama
@@ -114,13 +114,13 @@ help-desk/
 │   ├── security_service.py    # Interface de chiffrement
 │   └── tdah_features.py       # Gamification, Focus Mode, Points
 │
-├── 🖼️ ui/                      # Interface utilisateur
+├──ui/                      # Interface utilisateur
 │   ├── __init__.py
 │   ├── components.py          # Composants réutilisables
 │   ├── layout.py              # Pages principales (Accueil, Plus, etc.)
 │   └── tdah_dashboard.py      # Dashboard TDAH (Progrès)
 │
-├── 🛠️ utils/                  # Utilitaires
+├──utils/                  # Utilitaires
 │   ├── __init__.py
 │   ├── backup.py              # Système de backup automatique
 │   ├── dates.py               # Gestion des dates
@@ -130,7 +130,7 @@ help-desk/
 │   ├── security.py            # Chiffrement Fernet
 │   └── validation.py          # Validation des entrées
 │
-└── 🧪 tests/                  # Tests unitaires
+└──tests/                  # Tests unitaires
     ├── __init__.py
     ├── test_backup.py         # Tests du système de backup
     └── test_validation.py     # Tests de validation
@@ -140,12 +140,12 @@ help-desk/
 
 ## 🎯 Points techniques intéressants
 
-### 🏗️ Séparation des responsabilités (MVC)
+###  Séparation des responsabilités (MVC)
 - **Services** : Gèrent la logique métier (calcul de points, backup, export)
 - **Models** : Gèrent l'accès aux données (SQLite)
 - **UI** : Se concentre sur l'affichage (Streamlit)
 
-### 🔐 Sécurité et confidentialité
+###  Sécurité et confidentialité
 - **Base de données SQLite** avec permissions restrictives (600)
 - **Dossier `data/`** protégé (permissions 700)
 - **Aucune connexion externe** pour les données personnelles
@@ -154,13 +154,13 @@ help-desk/
 - **Backups automatiques** au démarrage
 - **Validation** de toutes les entrées utilisateur
 
-### 🤖 IA locale avec Ollama
+###  IA locale avec Ollama
 - Utilisation du modèle **llama3.1:8b**
 - Prompt système personnalisé pour un **ton bienveillant**
 - **Détection de détresse** avec réponses appropriées
 - **Pas de dépendance** à une API cloud
 
-### 🎮 Système de gamification
+###  Système de gamification
 - **Points automatiques** :
   - 10 pts : Humeur enregistrée
   - 20 pts : Tâche complétée
@@ -170,14 +170,14 @@ help-desk/
 - **Streaks** : Calcul automatique des jours consécutifs
 - **Confettis** : À 30 jours de suite ! 🎉
 
-### 📊 Visualisations TDAH-friendly
+###  Visualisations TDAH-friendly
 - Couleurs apaisantes : **Ocean Blue** (#3B82F6), **Mint Green** (#10B981), **Lavender** (#A78BFA)
 - Pas de **noir pur** ni de **rouge agressif**
 - **Espacements généreux** (24px padding)
 
 ---
 
-## 🚀 Installation
+##  Installation
 
 ### Prérequis
 
@@ -213,7 +213,7 @@ pip install -r requirements.txt
 
 #### 4️⃣ (Optionnel) Installer Ollama
 
-Voir le guide complet : [GUIDE_OLLAMA.md](GUIDE_OLLAMA.md)
+Voir le guide complet : [GUIDE_OLLAMA.md](Documentations/GUIDE_OLLAMA.md)
 
 ```bash
 # Télécharger le modèle
@@ -235,25 +235,25 @@ L'application s'ouvrira dans votre navigateur à l'adresse **`http://localhost:8
 
 ## 📚 Utilisation
 
-### 🌟 Première utilisation
+###  Première utilisation
 
 1. **Créer ton profil** : Prénom, date de naissance, tags personnalisés (TDAH, anxiété, etc.)
 2. **Découvrir l'interface** : Introduction interactive
 
-### 📅 Utilisation quotidienne
+###  Utilisation quotidienne
 
-1. **😊 Enregistre ton humeur** : Slider 1-10, émotions, motivation, notes
-2. **✅ Gère tes tâches** : Ajoute, complète, définis le temps passé
-3. **💬 Discute avec Mathi** : Assistant IA bienveillant
-4. **📊 Consulte tes stats** : Dashboard TDAH avec points, badges, séries
-5. **🎯 Utilise le Focus Mode** : Timer 25 min pour rester concentré
+1. ** Enregistre ton humeur** : Slider 1-10, émotions, motivation, notes
+2. ** Gère tes tâches** : Ajoute, complète, définis le temps passé
+3. ** Discute avec Mathi** : Assistant IA bienveillant
+4. ** Consulte tes stats** : Dashboard TDAH avec points, badges, séries
+5. ** Utilise le Focus Mode** : Timer 25 min pour rester concentré
 
 ### ⚙️ Fonctionnalités avancées
 
-- **📥 Export PDF/Excel** : Partage avec un professionnel
-- **💾 Backups** : Automatiques au démarrage + manuels
-- **🔐 Chiffrement** : Active pour protéger tes notes (optionnel)
-- **🎨 Préférences** : Taille du texte, notifications, animations
+- ** Export PDF/Excel** : Partage avec un professionnel
+- ** Backups** : Automatiques au démarrage + manuels
+- ** Chiffrement** : Active pour protéger tes notes (optionnel)
+- ** Préférences** : Taille du texte, notifications, animations
 
 ---
 
@@ -273,7 +273,7 @@ En développant Help-Desk, j'ai approfondi mes connaissances en :
 
 ---
 
-## 🔮 Limitations et améliorations futures
+##  Limitations et améliorations futures
 
 ### Actuellement
 
@@ -326,9 +326,9 @@ La protection de vos données est une **priorité absolue**.
 
 ### 📖 Pour en savoir plus
 
-- [SECURITE.md](SECURITE.md) - Politique de sécurité
-- [GUIDE_SECURITE.md](GUIDE_SECURITE.md) - Guide d'utilisation du chiffrement
-- [KNOWN_ISSUES.md](KNOWN_ISSUES.md) - Problèmes connus
+- [SECURITE.md](Documentations/SECURITE.md) - Politique de sécurité
+- [GUIDE_SECURITE.md](Documentations/GUIDE_SECURITE.md) - Guide d'utilisation du chiffrement
+- [KNOWN_ISSUES.md](Documentations/KNOWN_ISSUES.md) - Problèmes connus
 
 ---
 
@@ -342,7 +342,7 @@ Si tu traverses des difficultés importantes, **consulte un professionnel de san
 
 ## 🤝 Contribuer
 
-Les contributions sont les bienvenues ! Consulte [CONTRIBUTING.md](CONTRIBUTING.md) pour :
+Les contributions sont les bienvenues ! Consulte [CONTRIBUTING.md](Documentations/CONTRIBUTING.md) pour :
 
 - Signaler un bug
 - Proposer une fonctionnalité
@@ -352,7 +352,7 @@ Les contributions sont les bienvenues ! Consulte [CONTRIBUTING.md](CONTRIBUTING.
 
 ## 📜 Licence
 
-Ce projet est sous **GNU General Public License v3.0** - voir le fichier [LICENSE](LICENSE) pour plus de détails.
+Ce projet est sous **GNU General Public License v3.0** - voir le fichier [LICENSE](Documentations/LICENSE) pour plus de détails.
 
 ---
 
@@ -363,7 +363,7 @@ Merci à :
 - Les développeurs d'Ollama
 - Tous ceux qui m'ont inspiré et aidé
 
-Voir [REMERCIEMENTS.md](REMERCIEMENTS.md) pour la liste complète.
+Voir [REMERCIEMENTS.md](Documentations/REMERCIEMENTS.md) pour la liste complète.
 
 ---
 

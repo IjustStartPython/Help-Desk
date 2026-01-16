@@ -1,4 +1,4 @@
-## 🙏 Remerciements
+##  Remerciements
 
 Ce projet n'existerait pas sans :
 
@@ -63,9 +63,9 @@ Ce projet n'existerait pas sans :
 **Un grand merci à tous ceux qui contribueront à améliorer Help-Desk ! 🌟**
 
 Si ce projet t'aide ou t'inspire, n'hésite pas à :
-- ⭐ Mettre une étoile sur GitHub
-- 🐛 Signaler des bugs
-- 💡 Proposer des améliorations
-- 🤝 Contribuer au code
+-  Mettre une étoile sur GitHub
+-  Signaler des bugs
+-  Proposer des améliorations
+-  Contribuer au code
 
 ---
