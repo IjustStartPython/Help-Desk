@@ -1,149 +1,547 @@
-/* Thème personnalisé Help-Desk */
+/* ====================================
+   THÈME TDAH-FRIENDLY POUR HELP-DESK
+   Version 2.1 - Correction des cases vides
+   ==================================== */
 
-/* Couleurs principales */
+/* FORCER LE MODE CLAIR */
+@media (prefers-color-scheme: dark) {
+    :root {
+        color-scheme: light !important;
+    }
+}
+
+/* ====================================
+   PALETTE DE COULEURS APAISANTES
+   ==================================== */
 :root {
-    --primary-color: #4A90E2;
-    --secondary-color: #9AD1FA;
-    --background: #F8F9FA;
-    --card-bg: #FFFFFF;
-    --text-primary: #2C3E50;
-    --text-secondary: #7F8C8D;
-    --success: #52C41A;
-    --warning: #FA8C16;
-    --danger: #F5222D;
+    /* Fond - Tons doux et apaisants */
+    --bg-primary: #F7F9FC;           /* Bleu très pâle (fond principal) */
+    --bg-secondary: #FFFFFF;         /* Blanc (cartes) */
+    --bg-accent: #F0F4F8;            /* Gris bleuté très pâle */
+    
+    /* Texte - Pas de noir pur */
+    --text-primary: #2D3748;         /* Gris anthracite (principal) */
+    --text-secondary: #718096;       /* Gris moyen */
+    --text-muted: #A0AEC0;           /* Gris clair */
+    
+    /* Accent principal - Bleu doux */
+    --accent-primary: #7BA7D7;       /* Bleu ciel apaisant */
+    --accent-hover: #5A8AC5;         /* Bleu plus foncé au survol */
+    --accent-light: #B5D3F0;         /* Bleu très clair */
+    
+    /* États positifs */
+    --success: #81C784;              /* Vert doux */
+    --success-light: #C8E6C9;        /* Vert très clair */
+    
+    /* Attention douce */
+    --warning: #FFE082;              /* Jaune doux */
+    --warning-light: #FFF9C4;        /* Jaune très clair */
+    
+    /* Information */
+    --info: #90CAF9;                 /* Bleu ciel clair */
+    --info-light: #BBDEFB;           /* Bleu très clair */
+    
+    /* Focus - Lavande */
+    --focus-ring: #B4A7D6;           /* Lavande douce */
+    --focus-bg: #E8E3F3;             /* Lavande très pâle */
+    
+    /* Ombres douces */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.10);
+    
+    /* Espacements généreux */
+    --spacing-xs: 8px;
+    --spacing-sm: 16px;
+    --spacing-md: 24px;
+    --spacing-lg: 32px;
+    --spacing-xl: 48px;
+    
+    /* Rayons arrondis doux */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    
+    /* Animations douces */
+    --transition-fast: 150ms ease;
+    --transition-normal: 300ms ease;
+    
+    color-scheme: light !important;
 }
 
-/* Corps de la page */
-.main {
-    background-color: var(--background);
+/* ====================================
+   FOND GÉNÉRAL - Apaisant
+   ==================================== */
+body, 
+.main, 
+[data-testid="stAppViewContainer"], 
+[data-testid="stHeader"],
+.stApp {
+    background-color: var(--bg-primary) !important;
+    color: var(--text-primary) !important;
 }
 
-/* Cartes */
-.stMarkdown > div {
-    padding: 0.5rem;
+/* ====================================
+   TYPOGRAPHIE LISIBLE
+   ==================================== */
+* {
+    font-family: 'Inter', 'Roboto', 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-/* Boutons */
-.stButton > button {
-    border-radius: 8px;
-    transition: all 0.3s ease;
+/* Texte principal - Taille confortable */
+p, span, div, label {
+    color: var(--text-primary) !important;
+    font-size: 16px !important;
+    line-height: 1.6 !important;
 }
 
-.stButton > button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+/* Titres - Hiérarchie claire */
+h1 {
+    color: var(--text-primary) !important;
+    font-size: 32px !important;
+    font-weight: 600 !important;
+    margin-bottom: var(--spacing-lg) !important;
 }
 
-/* Formulaires */
-.stTextInput > div > div > input,
-.stTextArea > div > div > textarea,
-.stDateInput > div > div > input {
-    border-radius: 8px;
-    border: 2px solid #E8E8E8;
-    transition: border-color 0.3s ease;
+h2 {
+    color: var(--text-primary) !important;
+    font-size: 24px !important;
+    font-weight: 600 !important;
+    margin-bottom: var(--spacing-md) !important;
 }
 
-.stTextInput > div > div > input:focus,
-.stTextArea > div > div > textarea:focus {
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.1);
+h3 {
+    color: var(--text-primary) !important;
+    font-size: 20px !important;
+    font-weight: 500 !important;
+    margin-bottom: var(--spacing-sm) !important;
 }
 
-/* Slider */
-.stSlider > div > div > div {
-    background: linear-gradient(to right, #E8F4FD, #4A90E2);
-}
-
-/* Checkboxes */
-.stCheckbox {
-    padding: 0.5rem 0;
-}
-
-/* Tabs */
-.stTabs [data-baseweb="tab-list"] {
-    gap: 8px;
-    background-color: transparent;
-}
-
-.stTabs [data-baseweb="tab"] {
-    border-radius: 8px 8px 0 0;
-    padding: 0.75rem 1.5rem;
-    background-color: #E8E8E8;
-    transition: all 0.3s ease;
-}
-
-.stTabs [aria-selected="true"] {
-    background-color: var(--primary-color);
-    color: white;
-}
-
-/* Messages de succès/erreur */
-.stSuccess {
-    background-color: #F6FFED;
-    border-left: 4px solid var(--success);
-    border-radius: 8px;
-}
-
-.stWarning {
-    background-color: #FFFBE6;
-    border-left: 4px solid var(--warning);
-    border-radius: 8px;
-}
-
-.stError {
-    background-color: #FFF1F0;
-    border-left: 4px solid var(--danger);
-    border-radius: 8px;
-}
-
-/* Info boxes */
-.stInfo {
-    background-color: #E8F4FD;
-    border-left: 4px solid var(--primary-color);
-    border-radius: 8px;
-}
-
-/* Sidebar */
-[data-testid="stSidebar"] {
-    background: linear-gradient(180deg, #4A90E2 0%, #357ABD 100%);
-    color: white;
-}
-
-[data-testid="stSidebar"] * {
-    color: white !important;
-}
-
-/* Métriques */
-[data-testid="stMetricValue"] {
-    font-size: 2rem;
-    font-weight: bold;
-    color: var(--primary-color);
-}
-
-/* Graphiques */
-.stPlotlyChart {
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Headers */
-h1, h2, h3 {
-    color: var(--text-primary);
-    font-weight: 600;
-}
-
-/* Animation pour les cartes */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* ====================================
+   CONTENEURS - Espaces généreux
+   ==================================== */
+.block-container {
+    padding-top: var(--spacing-xl) !important;
+    padding-bottom: var(--spacing-xl) !important;
+    padding-left: var(--spacing-lg) !important;
+    padding-right: var(--spacing-lg) !important;
+    max-width: 1200px !important;
 }
 
 .element-container {
-    animation: fadeIn 0.3s ease;
+    margin-bottom: var(--spacing-sm);
+}
+
+/* ====================================
+   BOUTONS - Clairs et accessibles
+   ==================================== */
+   
+.stButton > button {
+    background-color: var(--accent-primary) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: var(--radius-md) !important;
+    padding: var(--spacing-sm) var(--spacing-md) !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    transition: all var(--transition-normal) !important;
+    box-shadow: var(--shadow-sm) !important;
+    min-height: 48px !important;
+}
+
+.stButton > button:hover {
+    background-color: var(--accent-hover) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: var(--shadow-md) !important;
+}
+
+.stButton > button:active {
+    transform: translateY(0) !important;
+}
+
+/* Bouton primaire - Action principale */
+.stButton > button[kind="primary"] {
+    background-color: var(--accent-primary) !important;
+    font-size: 18px !important;
+    padding: var(--spacing-md) var(--spacing-lg) !important;
+    min-height: 56px !important;
+}
+
+/* Bouton secondaire */
+.stButton > button[kind="secondary"] {
+    background-color: var(--bg-accent) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Boutons rouges (supprimer, etc.) → Vert pastel doux */
+button[class*="st-emotion-cache"] {
+    background-color: var(--success) !important;
+    border-color: var(--success) !important;
+    color: white !important;
+}
+
+button[class*="st-emotion-cache"]:hover {
+    background-color: #66BB6A !important;
+    border-color: #66BB6A !important;
+}
+
+/* ====================================
+   FORMULAIRES - Faciles à utiliser
+   ==================================== */
+.stTextInput > div > div > input,
+.stTextArea > div > div > textarea,
+.stDateInput > div > div > input,
+.stNumberInput > div > div > input {
+    background-color: var(--bg-secondary) !important;
+    color: var(--text-primary) !important;
+    border: 2px solid var(--bg-accent) !important;
+    border-radius: var(--radius-md) !important;
+    padding: var(--spacing-sm) !important;
+    font-size: 16px !important;
+    transition: border-color var(--transition-fast) !important;
+}
+
+.stTextInput > div > div > input:focus,
+.stTextArea > div > div > textarea:focus,
+.stDateInput > div > div > input:focus {
+    border-color: var(--accent-primary) !important;
+    box-shadow: 0 0 0 3px var(--focus-bg) !important;
+    outline: none !important;
+}
+
+/* Labels - Visibles et clairs */
+label {
+    color: var(--text-primary) !important;
+    font-weight: 500 !important;
+    margin-bottom: var(--spacing-xs) !important;
+}
+
+/* ====================================
+   SLIDER - Visuel et intuitif
+   ==================================== */
+.stSlider > div > div > div {
+    background: linear-gradient(
+        to right, 
+        var(--accent-light) 0%, 
+        var(--accent-primary) 100%
+    ) !important;
+}
+
+.stSlider [role="slider"] {
+    background-color: var(--accent-primary) !important;
+    border: 3px solid white !important;
+    box-shadow: var(--shadow-md) !important;
+}
+
+/* ====================================
+   CHECKBOX - Clair et simple
+   ==================================== */
+.stCheckbox {
+    padding: var(--spacing-sm) 0 !important;
+}
+
+.stCheckbox > label > div {
+    background-color: var(--bg-secondary) !important;
+    border: 2px solid var(--bg-accent) !important;
+    border-radius: var(--radius-sm) !important;
+}
+
+.stCheckbox > label > div[data-checked="true"] {
+    background-color: var(--success) !important;
+    border-color: var(--success) !important;
+}
+
+/* ====================================
+   TABS - Navigation claire
+   ==================================== */
+.stTabs [data-baseweb="tab-list"] {
+    gap: var(--spacing-xs);
+    background-color: transparent !important;
+    border-bottom: 2px solid var(--bg-accent);
+}
+
+.stTabs [data-baseweb="tab"] {
+    border-radius: var(--radius-md) var(--radius-md) 0 0 !important;
+    padding: var(--spacing-sm) var(--spacing-md) !important;
+    background-color: var(--bg-accent) !important;
+    color: var(--text-secondary) !important;
+    border: none !important;
+    transition: all var(--transition-fast) !important;
+    font-weight: 500 !important;
+}
+
+.stTabs [data-baseweb="tab"]:hover {
+    background-color: var(--accent-light) !important;
+    color: var(--text-primary) !important;
+}
+
+.stTabs [aria-selected="true"] {
+    background-color: var(--accent-primary) !important;
+    color: white !important;
+    box-shadow: var(--shadow-sm);
+}
+
+/* ====================================
+   MESSAGES - Feedback visuel
+   ==================================== */
+.stSuccess {
+    background-color: var(--success-light) !important;
+    border-left: 4px solid var(--success) !important;
+    border-radius: var(--radius-md) !important;
+    padding: var(--spacing-md) !important;
+    color: var(--text-primary) !important;
+}
+
+.stWarning {
+    background-color: var(--warning-light) !important;
+    border-left: 4px solid var(--warning) !important;
+    border-radius: var(--radius-md) !important;
+    padding: var(--spacing-md) !important;
+    color: var(--text-primary) !important;
+}
+
+.stError {
+    background-color: #FFEBEE !important;
+    border-left: 4px solid #EF5350 !important;
+    border-radius: var(--radius-md) !important;
+    padding: var(--spacing-md) !important;
+    color: var(--text-primary) !important;
+}
+
+.stInfo {
+    background-color: var(--info-light) !important;
+    border-left: 4px solid var(--info) !important;
+    border-radius: var(--radius-md) !important;
+    padding: var(--spacing-md) !important;
+    color: var(--text-primary) !important;
+}
+
+/* ====================================
+   EXPANDER - Organisation claire
+   ==================================== */
+.streamlit-expanderHeader {
+    background-color: var(--bg-accent) !important;
+    border-radius: var(--radius-md) !important;
+    padding: var(--spacing-sm) var(--spacing-md) !important;
+    font-weight: 500 !important;
+}
+
+.streamlit-expanderContent {
+    background-color: var(--bg-secondary) !important;
+    border-radius: 0 0 var(--radius-md) var(--radius-md) !important;
+    padding: var(--spacing-md) !important;
+    border: 1px solid var(--bg-accent) !important;
+    border-top: none !important;
+}
+
+/* ====================================
+   METRICS - Statistiques visuelles
+   ==================================== */
+[data-testid="stMetricValue"] {
+    font-size: 32px !important;
+    font-weight: 600 !important;
+    color: var(--accent-primary) !important;
+}
+
+[data-testid="stMetricDelta"] {
+    font-size: 14px !important;
+}
+
+[data-testid="stMetricDelta"] > div[data-testid="stMetricDeltaIcon-Up"] {
+    color: var(--success) !important;
+}
+
+/* ====================================
+   PROGRESS BAR - Visuel et motivant
+   ==================================== */
+.stProgress > div > div {
+    background-color: var(--bg-accent) !important;
+    border-radius: var(--radius-lg) !important;
+    height: 16px !important;
+}
+
+.stProgress > div > div > div {
+    background: linear-gradient(
+        90deg, 
+        var(--accent-primary) 0%, 
+        var(--accent-hover) 100%
+    ) !important;
+    border-radius: var(--radius-lg) !important;
+}
+
+/* ====================================
+   SIDEBAR - Navigation simple
+   ==================================== */
+[data-testid="stSidebar"] {
+    background-color: var(--bg-secondary) !important;
+    border-right: 1px solid var(--bg-accent) !important;
+}
+
+[data-testid="stSidebar"] .block-container {
+    padding: var(--spacing-md) !important;
+}
+
+[data-testid="stSidebar"] {
+    background-color: var(--bg-secondary) !important;
+    border-right: 1px solid var(--bg-accent) !important;
+}
+
+[data-testid="stSidebar"] .block-container {
+    padding: 0px !important;
+}
+
+[data-testid="stSidebar"] .element-container {
+    margin-bottom: 0.25rem !important;
+}
+
+[data-testid="stSidebar"] [data-testid="stMetric"] {
+    margin-bottom: 0.25rem !important;
+}
+
+[data-testid="stSidebar"] hr {
+    margin: 0.25rem 0 !important;
+}
+/* ====================================
+   DATAFRAME / TABLE - Lisible
+   ==================================== */
+.dataframe {
+    border: none !important;
+    border-radius: var(--radius-md) !important;
+    overflow: hidden;
+}
+
+.dataframe th {
+    background-color: var(--accent-light) !important;
+    color: var(--text-primary) !important;
+    font-weight: 600 !important;
+    padding: var(--spacing-sm) !important;
+    border: none !important;
+}
+
+.dataframe td {
+    background-color: var(--bg-secondary) !important;
+    color: var(--text-primary) !important;
+    padding: var(--spacing-sm) !important;
+    border-bottom: 1px solid var(--bg-accent) !important;
+}
+
+.dataframe tr:nth-child(even) td {
+    background-color: var(--bg-accent) !important;
+}
+
+/* ====================================
+   SELECTBOX - Dropdown clair
+   ==================================== */
+.stSelectbox > div > div {
+    background-color: var(--bg-secondary) !important;
+    border: 2px solid var(--bg-accent) !important;
+    border-radius: var(--radius-md) !important;
+}
+
+/* ====================================
+   RADIO BUTTONS - Choix visibles
+   ==================================== */
+.stRadio > div {
+    gap: var(--spacing-sm);
+}
+
+.stRadio > div > label {
+    background-color: var(--bg-accent) !important;
+    padding: var(--spacing-sm) var(--spacing-md) !important;
+    border-radius: var(--radius-md) !important;
+    transition: all var(--transition-fast) !important;
+}
+
+.stRadio > div > label[data-checked="true"] {
+    background-color: var(--accent-primary) !important;
+    color: white !important;
+}
+
+/* ====================================
+   SPINNER - Chargement doux
+   ==================================== */
+.stSpinner > div {
+    border-color: var(--accent-primary) !important;
+}
+
+/* ====================================
+   RESPONSIVE - Mobile friendly
+   ==================================== */
+@media (max-width: 768px) {
+    .block-container {
+        padding: var(--spacing-md) !important;
+    }
+    
+    h1 {
+        font-size: 24px !important;
+    }
+    
+    h2 {
+        font-size: 20px !important;
+    }
+    
+    .stButton > button {
+        width: 100% !important;
+    }
+}
+
+/* ====================================
+   SCROLLBAR - Douce et discrète
+   ==================================== */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-accent);
+    border-radius: var(--radius-lg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent-light);
+    border-radius: var(--radius-lg);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-primary);
+}
+
+/* ====================================
+   ACCESSIBILITÉ - Focus visible
+   ==================================== */
+*:focus {
+    outline: 3px solid var(--focus-ring) !important;
+    outline-offset: 2px !important;
+}
+
+button:focus {
+    box-shadow: 0 0 0 3px var(--focus-bg) !important;
+}
+
+/* ====================================
+   IMPRESSION
+   ==================================== */
+@media print {
+    body {
+        background-color: white !important;
+    }
+    
+    .stButton,
+    [data-testid="stSidebar"] {
+        display: none !important;
+    }
+}
+
+/* Réduire l'espace des containers vides */
+div[class*="st-emotion"]:empty {
+    display: none !important;
+}
+
+/* Limiter la hauteur des éléments de type "spacer" */
+.css-1kyxreq, 
+.css-12oz5g7,
+[data-testid="stVerticalBlock"] > div:empty {
+    min-height: 0 !important;
+    height: auto !important;
 }

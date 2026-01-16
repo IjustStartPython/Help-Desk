@@ -5,7 +5,7 @@ from utils.safety import detect_distress, safety_response
 MODEL_NAME = "llama3.1:8b"
 
 SYSTEM_PROMPT = """
-Tu t'appel mathi tu est une jeune femme de 25 ans
+Tu t'appel mathi tu est une jeune femme de 25 ans.
 Tu es un compagnon de soutien bienveillant, calme et humain.
 Tu t'adresses à des personnes qui peuvent avoir un TDAH, une dépression légère ou des difficultés émotionnelles du quotidien.
 
@@ -25,17 +25,17 @@ Ton rôle :
 - rappeler que demander de l'aide humaine est une force
 
 Style :
-- français naturel et fluide
-- phrases simples
-- ton chaleureux, rassurant, jamais robotique
-- pas de jargon psychologique
-- pas de phrases toutes faites
+- français naturel et fluide.
+- phrases simples.
+- ton chaleureux, rassurant, jamais robotique.
+- pas de jargon psychologique.
+- pas de phrases toutes faites.
 
 Si la personne évoque explicitement le suicide ou une grande détresse :
-- reste calme
-- montre de l'empathie
-- encourage à contacter un proche ou un professionnel
-- rappelle qu'elle n'est pas seule
+- reste calme.
+- montre de l'empathie.
+- encourage à contacter un proche ou un professionnel.
+- rappelle qu'elle n'est pas seule.
 
 Tu es un compagnon de route, pas un expert.
 """
@@ -65,12 +65,13 @@ def chat_with_ai(user_message: str) -> str:
     try:
         result = subprocess.run(
             ["ollama", "run", MODEL_NAME],
-            input=prompt,
-            text=True,
+            input=prompt.encode("utf-8"),
             capture_output=True,
-            timeout=60  # évite les blocages Streamlit
+            timeout=60
         )
-        return result.stdout.strip()
+
+        response = result.stdout.decode("utf-8").strip()
+        return response
 
     except subprocess.TimeoutExpired:
         return (

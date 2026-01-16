@@ -1,9 +1,28 @@
-streamlit
-pandas
-matplotlib
-fpdf2
-sqlite-utils
-cryptography
-python-dateutil
-openpyxl
 
+# Requirements pour Help-Desk
+# Dernière mise à jour : 16 janvier 2026
+
+# Interface utilisateur============================================
+streamlit==1.52.2
+
+# Manipulation de données============================================
+pandas==2.3.3
+
+# Visualisation de données============================================
+matplotlib==3.10.8
+plotly==6.5.2
+
+# Génération de PDF============================================
+fpdf2==2.8.5
+
+# Base de données SQLite============================================
+sqlite-utils==3.39
+
+# Chiffrement et sécurité============================================
+cryptography==46.0.3
+
+# Gestion des dates============================================
+python-dateutil==2.9.0.post0
+
+# Export Excel============================================
+openpyxl==3.1.5

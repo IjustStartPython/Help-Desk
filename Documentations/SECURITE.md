@@ -26,12 +26,12 @@ Toutes vos données sont stockées **uniquement sur votre appareil local** dans 
 
 Pour une sécurité maximale, je vous recommande :
 
-1. **Activer le chiffrement du disque**
+1. **chiffrement du disque**
    - **Windows** : BitLocker
    - **macOS** : FileVault
    - **Linux** : LUKS/dm-crypt
 
-2. **Protéger votre session utilisateur**
+2. **Protéger la  session utilisateur**
    - Utilisez un mot de passe fort pour votre compte utilisateur
    - Verrouillez votre ordinateur quand vous vous absentez
 

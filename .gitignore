@@ -58,3 +58,9 @@ htmlcov/
 exports/
 *.pdf
 *.xlsx
+
+#autres
+nul
+pi.txt
+.ui/
+*layout_old.py

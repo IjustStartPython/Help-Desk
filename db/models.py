@@ -1,10 +1,12 @@
+# les modeles de la base de donnée (les tables)
 from db.database import get_connection
 
 def init_db():
-    """Initialise toutes les tables si elles n'existent pas déjà."""
+    """Initialise toutes les tables si elles existent pas encore"""
     conn = get_connection()
     cursor = conn.cursor()
 
+    # on crée toutes les tables
     create_user_table(cursor)
     create_mood_table(cursor)
     create_tasks_table(cursor)
@@ -15,7 +17,7 @@ def init_db():
 
 
 def create_user_table(cursor):
-    """Crée la table users"""
+    """Crée la table users pour stocker le profil"""
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS users (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -29,7 +31,7 @@ def create_user_table(cursor):
 
 
 def create_mood_table(cursor):
-    """Crée la table mood"""
+    """Crée la table mood pour les humeurs"""
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS mood (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -44,7 +46,8 @@ def create_mood_table(cursor):
 
 
 def create_tasks_table(cursor):
-    """Crée la table tasks"""
+    """Crée la table tasks pour les taches
+    note: j'ai ajouté d'autres colonnes avec migrate_database() apres"""
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS tasks(
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -56,7 +59,7 @@ def create_tasks_table(cursor):
 
 
 def create_notes_table(cursor):
-    """Crée la table notes"""
+    """table pour les notes libres"""
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS notes (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -67,9 +70,10 @@ def create_notes_table(cursor):
 
 
 def save_profile_to_db(prenom, birth_date, tags):
-    """Sauvegarde le profil utilisateur"""
+    """Sauvegarde le profil dans la bdd"""
     conn = get_connection()
     cursor = conn.cursor()
+    # on met les tags en string séparés par des virgules (plus simple)
     cursor.execute("""
         INSERT INTO users (prenom, birth_date, tags)
         VALUES (?, ?, ?)
@@ -79,17 +83,19 @@ def save_profile_to_db(prenom, birth_date, tags):
 
 
 def load_profile_from_db():
-    """Charge le dernier profil créé"""
+    """Charge le dernier profil créé (on prend le plus recent)"""
     conn = get_connection()
     cursor = conn.cursor()
     cursor.execute("SELECT prenom, birth_date, tags FROM users ORDER BY id DESC LIMIT 1")
     row = cursor.fetchone()
     conn.close()
+
     if row:
         prenom, birth_date, tags = row
+        # on remet les tags en liste
         return {
             "prenom": prenom,
             "birth_date": birth_date,
             "tags": [t.strip() for t in tags.split(",") if t.strip()]
         }
-    return None
+    return None  # pas de profil trouvé

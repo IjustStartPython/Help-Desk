@@ -1,0 +1,29 @@
+
+# Dépendances de développement pour Help-Desk
+# Dernière mise à jour : 16 janvier 2026
+
+# Dépendances principales (hérités de requirements.txt)
+-r requirements.txt
+
+
+# Outils de test============================================
+pytest==8.3.4
+pytest-cov==6.0.0
+pytest-mock==3.14.0
+pytest-xdist==3.6.1              # NOUVEAU : Tests en parallèle (plus rapide)
+
+
+# Outils de qualité de code============================================
+black==24.10.0                   # Formatage automatique
+flake8==7.1.1                    # Détection erreurs de style
+mypy==1.13.0                     # Vérification des types
+isort==5.13.2                    # NOUVEAU : Organisation automatique des imports
+
+
+# Outils de sécurité============================================
+bandit==1.8.0                    # Détection failles de sécurité
+safety==3.2.11                   # Vérification vulnérabilités
+
+
+# Automatisation============================================
+pre-commit==4.0.1                # NOUVEAU : Vérifications automatiques avant commit
