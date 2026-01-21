@@ -17,8 +17,9 @@ from ui.layout import (
     render_profile_page,
     render_intro_page,
     render_home_page,
-    render_dashboard
+    render_dashboard,
 )
+
 # TODO: ajouter un systeme de notification push un jour
 
 # Configuration de la page Streamlit (doit etre en premier sinon ca bug)
@@ -26,26 +27,29 @@ st.set_page_config(
     page_title="Help-Desk - Compagnon du quotidien",
     page_icon="💙",
     layout="wide",
-    initial_sidebar_state="collapsed"
+    initial_sidebar_state="collapsed",
 )
 
-# Forcer le mode clair sinon ça prend le mode sombre du navigateur et c'est moche
-st.markdown("""
+# Forcer le mode clair le mode sombre du navigateur et c'est moche
+st.markdown(
+    """
     <style>
         @media (prefers-color-scheme: dark) {
             :root { color-scheme: light !important; }
         }
     </style>
-""", unsafe_allow_html=True)
+""",
+    unsafe_allow_html=True,
+)
+
+# Créer les tables si elles existent pas
+init_db()
 
 # Initialisation de la base de données
 # Migration des anciennes données (j'ai du faire ca parce que j'ai changé la structure des tables)
 if "migration_done" not in st.session_state:
     migrate_database()
     st.session_state.migration_done = True
-
-# Créer les tables si elles existent pas
-init_db()
 
 # Connexion à la base (on garde la connection ouverte pour pas la réouvrir a chaque fois)
 if "conn" not in st.session_state:
@@ -69,7 +73,7 @@ defaults = {
     "intro_done": False,
     "mood_logged_today": False,
     "selected_day": None,
-    "focus_mode": False
+    "focus_mode": False,
 }
 
 # Mettre les valeurs par défaut (j'ai trouvé cette technique sur stackoverflow)
@@ -104,37 +108,47 @@ with st.sidebar:
 
     # Afficher le profil si connecté
     if st.session_state.profile_created and st.session_state.profile:
-        st.markdown(f"**Connecté en tant que :**  \n{st.session_state.profile['prenom']}")
+        st.markdown(
+            f"**Connecté en tant que :**  \n{st.session_state.profile['prenom']}"
+        )
 
         # Afficher les tags
-        if st.session_state.profile.get('tags'):
+        if st.session_state.profile.get("tags"):
             st.markdown("**Tags :**")
-            for tag in st.session_state.profile['tags']:
+            for tag in st.session_state.profile["tags"]:
                 st.markdown(f"- {tag}")
 
         st.markdown("---")
 
         # Bouton pour recommencer la journée (si on veut refaire l'humeur)
-        if st.button("🔄 Recommencer la journée", type="secondary", use_container_width=True):
+        if st.button(
+            "🔄 Recommencer la journée", type="secondary", use_container_width=True
+        ):
             if "confirm_restart_day" not in st.session_state:
                 st.session_state.confirm_restart_day = False
 
             if not st.session_state.confirm_restart_day:
                 st.session_state.confirm_restart_day = True
-                st.warning("⚠️ Tu vas recommencer l'enregistrement de ton humeur du jour. Clique à nouveau pour confirmer.")
+                st.warning(
+                    "⚠️ Tu vas recommencer l'enregistrement de ton humeur du jour. Clique à nouveau pour confirmer."
+                )
             else:
                 st.session_state.mood_logged_today = False
                 st.session_state.confirm_restart_day = False
                 st.rerun()
 
         # Bouton pour recréer le profil (si l'utilisateur veut tout recommencer)
-        if st.button("👤 Recréer mon profil", type="secondary", use_container_width=True):
+        if st.button(
+            "👤 Recréer mon profil", type="secondary", use_container_width=True
+        ):
             if "confirm_reset_profile" not in st.session_state:
                 st.session_state.confirm_reset_profile = False
 
             if not st.session_state.confirm_reset_profile:
                 st.session_state.confirm_reset_profile = True
-                st.warning("⚠️ Attention ! Cela va réinitialiser ton profil. Clique à nouveau pour confirmer.")
+                st.warning(
+                    "⚠️ Attention ! Cela va réinitialiser ton profil. Clique à nouveau pour confirmer."
+                )
             else:
                 # on reset tout
                 st.session_state.profile_created = False
