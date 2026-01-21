@@ -2,12 +2,15 @@ import streamlit as st
 import pandas as pd
 from datetime import date
 from db.database import get_connection
+
+
 @st.cache_data
 def get_mood_history():
     """Récupère l'historique des humeurs"""
     conn = get_connection()
-    
-    df = pd.read_sql("""
+
+    df = pd.read_sql(
+        """
         SELECT 
             id,
             mood_value,
@@ -17,11 +20,13 @@ def get_mood_history():
             created_at
         FROM mood
         ORDER BY created_at DESC
-    """, conn)
-    
+    """,
+        conn,
+    )
+
     conn.close()
-    
-    return df.to_dict('records') if not df.empty else []
+
+    return df.to_dict("records") if not df.empty else []
 
 
 def check_mood_logged_today():
@@ -29,24 +34,31 @@ def check_mood_logged_today():
     conn = st.session_state.conn
     cur = conn.cursor()
     today = date.today().isoformat()
-    cur.execute("""
+    cur.execute(
+        """
         SELECT COUNT(*)
         FROM mood
         WHERE DATE(created_at) = ?
-    """, (today,))
+    """,
+        (today,),
+    )
     count = cur.fetchone()[0]
     return count > 0
+
 
 def save_mood(mood, emotion, motivation, notes):
     """Enregistre l'humeur du jour"""
     conn = get_connection()
     cursor = conn.cursor()
-    
-    cursor.execute("""
+
+    cursor.execute(
+        """
         INSERT INTO mood (mood_value, emotion, motivation, notes)
         VALUES (?, ?, ?, ?)
-    """, (mood, emotion, motivation, notes))
-    
+    """,
+        (mood, emotion, motivation, notes),
+    )
+
     conn.commit()
     conn.close()
 
@@ -54,8 +66,5 @@ def save_mood(mood, emotion, motivation, notes):
 def add_note(content):
     """Ajoute une note rapide dans la table notes"""
     conn = st.session_state.conn
-    conn.execute(
-        "INSERT INTO notes(content) VALUES (?)",
-        (content,)
-    )
+    conn.execute("INSERT INTO notes(content) VALUES (?)", (content,))
     conn.commit()
